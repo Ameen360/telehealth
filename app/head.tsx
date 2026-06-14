@@ -1,16 +1,17 @@
 export default function Head() {
     return (
         <>
-            <title>Aspramed - Accessible Healthcare Anywhere, Anytime</title>
+            <title>Lakmed - Secure Telehealth for Africa</title>
             <meta
                 content="width=device-width, initial-scale=1"
                 name="viewport"
             />
             <meta
                 name="description"
-                content="Virtual consultations for patients and complete digital platform for healthcare providers in Zambia and Nigeria."
+                content="Virtual healthcare consultations for patients and an integrated digital platform 
+                for healthcare providers across Nigeria and Africa."
             />
-            <link rel="icon" href="/logo.png" />
+            <link rel="icon" href="/favicon.ico" />
         </>
     );
 }
