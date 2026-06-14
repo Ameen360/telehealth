@@ -75,7 +75,7 @@ export default function PatientsPage() {
                         <div className="relative">
                             <Image
                                 className="w-full rounded-2xl shadow-2xl"
-                                src="/p1.jpg"
+                                src="/lakmed1.png"
                                 alt="Mother and child using telehealth app"
                                 width={200}
                                 height={200}

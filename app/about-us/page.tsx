@@ -7,18 +7,28 @@ import Link from "next/link";
 export default function AboutPage() {
     return (
         <>
-            <section className="relative py-24 lg:py-32 bg-gradient-to-br from-blue-50 to-green-50">
-                <div className="absolute inset-0 bg-black/10"></div>
-                <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 text-balance">
-                        We Believe Quality Healthcare is a Right, Not a
-                        Privilege
+            <section className="relative py-24 lg:py-32">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/waiting_Area.png"
+                        alt="Healthcare accessibility background"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                    {/* Gradient overlay using your brand colors */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#181F59]/80 to-[#43D6D6]/60"></div>
+                </div>
+
+                {/* Content */}
+                <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance">
+                        We Believe Quality Healthcare is a Right, Not a Privilege
                     </h1>
-                    <p className="text-xl md:text-2xl text-slate-700 max-w-4xl mx-auto text-balance">
-                        Aspramed was founded to bridge the distance between
-                        patients and providers, using technology to make
-                        healthcare simple, accessible, and compassionate for
-                        everyone.
+                    <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto text-balance">
+                        At Lakmed, we use technology to make healthcare easier to access, helping patients
+                        connect with trusted providers whenever and wherever they need care.
                     </p>
                 </div>
             </section>
@@ -29,39 +39,33 @@ export default function AboutPage() {
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
                             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
-                                From an Idea to a Lifeline
+                                Building Better Access to Healthcare
                             </h2>
                             <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
                                 <p>
-                                    Our journey began with a simple observation:
-                                    too many people faced barriers—distance,
-                                    cost, and time—to get the medical care they
-                                    needed. Founded in Australia with a vision
-                                    for global health equity, we set our sights
-                                    on markets where technology could make the
-                                    most significant impact.
+                                    Our journey began with a commitment to making healthcare more accessible for everyone.
+                                    We recognized that many people face challenges such as distance, limited access to
+                                    providers, and time constraints when seeking quality care. Driven by a vision to improve
+                                    healthcare delivery through technology, Lakmed was created to connect patients with trusted
+                                    healthcare professionals, making care more convenient, efficient, and accessible whenever it
+                                    is needed.
                                 </p>
                                 <p>
-                                    We established our operations in Zambia and
-                                    Nigeria to bring a world-class telehealth
-                                    platform tailored to the unique needs of
-                                    local communities and healthcare providers.
-                                    Every feature we build, every partnership we
-                                    forge, is driven by our commitment to making
-                                    quality healthcare accessible to all.
+                                    We established our operations to deliver a world-class telehealth platform designed to meet
+                                    the evolving needs of patients, communities, and healthcare providers. Every feature we develop
+                                    and every partnership we build is guided by our commitment to expanding access to quality healthcare,
+                                    improving patient outcomes, and creating a more connected healthcare experience for all.
                                 </p>
                                 <p>
-                                    Today, Aspramed serves thousands of patients
-                                    and hundreds of healthcare professionals
-                                    across two continents, but our mission
-                                    remains the same: to eliminate barriers and
-                                    create connections that save lives.
+                                    As Lakmed continues to grow, our purpose remains unchanged: empowering patients, supporting
+                                    healthcare professionals, and making quality healthcare accessible whenever and wherever it is
+                                    needed.
                                 </p>
                             </div>
                         </div>
                         <div className="relative">
                             <Image
-                                src="/about.jpg"
+                                src="/lakmed.png"
                                 alt="Healthcare team collaboration representing Aspramed's founding vision"
                                 width={600}
                                 height={400}
@@ -82,10 +86,11 @@ export default function AboutPage() {
                                     Our Mission
                                 </h2>
                                 <p className="text-lg text-slate-700 leading-relaxed">
-                                    To empower health and wellness by providing
-                                    a seamless, secure, and accessible
-                                    telehealth platform that connects patients
-                                    to quality care, anytime, anywhere.
+                                    To transform healthcare access across Nigeria and Sub-Saharan Africa by providing seamless,
+                                    secure, and patient-centered telehealth solutions. Our mission is to connect individuals and
+                                    communities with quality healthcare services regardless of their location or circumstances,
+                                    fostering healthier populations through innovation, accessibility, and continuous care.
+
                                 </p>
                             </CardContent>
                         </Card>
@@ -95,10 +100,9 @@ export default function AboutPage() {
                                     Our Vision
                                 </h2>
                                 <p className="text-lg text-slate-700 leading-relaxed">
-                                    To be Africa&apos;s most trusted digital health
-                                    partner, creating a future where every
-                                    individual has the tools and access to
-                                    manage their health proactively.
+                                    To create a future where quality healthcare is accessible to everyone, empowering individuals
+                                    and communities through innovative, patient-centered digital health solutions.
+
                                 </p>
                             </CardContent>
                         </Card>
@@ -186,94 +190,54 @@ export default function AboutPage() {
             <section className="py-24 bg-slate-50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                            The Team Behind the Vision
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#181F59] mb-4">
+                            The Visionary Behind Lakmed
                         </h2>
+                        <div className="max-w-3xl mx-auto">
+                            <p className="text-xl md:text-2xl text-[#43D6D6] font-medium italic leading-relaxed">
+                                "Getting transportation and food delivery by phone is easy. So why are patients still packed into waiting rooms to see their doctor?"
+                            </p>
+                        </div>
                     </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-                        <Card className="p-8 text-center bg-white border-0 shadow-lg">
-                            <CardContent className="p-0">
-                                <Image
-                                    src="/akeem.jpeg"
-                                    alt="Founder"
-                                    width={200}
-                                    height={200}
-                                    className="w-32 h-32 rounded-full mx-auto mb-6 object-cover"
-                                />
-                                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                                    Dr. Akeem Lawal
-                                </h3>
-                                <p className="text-blue-600 font-medium mb-4">
-                                    Founder
-                                </p>
-                                <p className="text-slate-700 mb-4">
-                                    A healthcare visionary with 25+ years in
-                                    digital health, passionate about making
-                                    quality care accessible to underserved
-                                    communities.
-                                </p>
-                                <Link
-                                    href="https://www.linkedin.com/in/akeem-lawal-166a149/"
-                                    className="inline-flex items-center text-blue-600 hover:text-blue-700">
-                                    <Linkedin className="w-5 h-5" />
-                                </Link>
-                            </CardContent>
-                        </Card>
-                        <Card className="p-8 text-center bg-white border-0 shadow-lg">
-                            <CardContent className="p-0">
-                                <Image
-                                    src="/cynthia.jpeg"
-                                    alt="Founder"
-                                    width={200}
-                                    height={200}
-                                    className="w-32 h-32 rounded-full mx-auto mb-6 object-cover"
-                                />
-                                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                                    Cynthia Musafili Wright
-                                </h3>
-                                <p className="text-blue-600 font-medium mb-4">
-                                    Founder
-                                </p>
-                                <p className="text-slate-700 mb-4">
-                                    Tech innovator specializing in scalable
-                                    healthcare platforms, committed to building
-                                    secure, user-friendly solutions for Africa.
-                                </p>
-                                <Link
-                                    href="https://www.linkedin.com/in/cynthia-wright-maicd/?originalSubdomain=au"
-                                    className="inline-flex items-center text-blue-600 hover:text-blue-700">
-                                    <Linkedin className="w-5 h-5" />
-                                </Link>
-                            </CardContent>
-                        </Card>
-                        <Card className="p-8 text-center bg-white border-0 shadow-lg">
-                            <CardContent className="p-0">
-                                <Image
-                                    src="/tommy.png"
-                                    alt="Founder"
-                                    width={200}
-                                    height={200}
-                                    className="w-32 h-32 rounded-full mx-auto mb-6 object-cover"
-                                />
-                                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                                    Tommy Adebayo
-                                </h3>
-                                <p className="text-blue-600 font-medium mb-4">
-                                    Founder
-                                </p>
-                                <p className="text-slate-700 mb-4">
-                                    Experienced entrepreneur and business
-                                    strategist with a passion for leveraging
-                                    technology to solve real-world healthcare
-                                    challenges.
-                                </p>
-                                <Link
-                                    href="https://www.linkedin.com/in/tommyadebayo/?originalSubdomain=au"
-                                    className="inline-flex items-center text-blue-600 hover:text-blue-700">
-                                    <Linkedin className="w-5 h-5" />
-                                </Link>
-                            </CardContent>
-                        </Card>
+
+                    {/* Centered Grid - Single card */}
+                    <div className="flex justify-center">
+                        <div className="max-w-md w-full">
+                            <Card className="p-8 text-center bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                                <CardContent className="p-0">
+                                    <div className="relative">
+                                        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#43D6D6]/20 to-[#181F59]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+                                        <Image
+                                            src="/akeem.jpeg"
+                                            alt="Founder"
+                                            width={200}
+                                            height={200}
+                                            className="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-[#43D6D6] group-hover:border-[#181F59] transition-colors duration-300 relative z-10"
+                                        />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-[#181F59] mb-2">
+                                        Dr. Akeem Lawal
+                                    </h3>
+                                    <p className="text-[#43D6D6] font-semibold mb-4">
+                                        Founder
+                                    </p>
+                                    <p className="text-slate-700 mb-4 leading-relaxed">
+                                        A healthcare visionary with 25+ years in
+                                        digital health, passionate about making
+                                        quality care accessible to underserved
+                                        communities.
+                                    </p>
+                                    <Link
+                                        href="https://www.linkedin.com/in/akeem-lawal-166a149/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 text-[#43D6D6] hover:text-[#181F59] transition-colors group/link">
+                                        <Linkedin className="w-5 h-5" />
+                                        <span className="text-sm font-medium">Connect on LinkedIn</span>
+                                    </Link>
+                                </CardContent>
+                            </Card>
+                        </div>
                     </div>
                 </div>
             </section>

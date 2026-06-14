@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import image1 from "../public/logo.png";
+import image1 from "../public/motto1.png";
 import Container from "./container";
 import { SheetDemo } from "./mobile-toolbar";
 
@@ -22,11 +22,11 @@ export default function Header() {
                             alt="Aspramed Logo"
                             width={600}
                             height={600}
-                            className="h-[30px] w-[50px] rounded-sm "
+                            className="h-12 w-auto"
                         />
-                        <h3 className="text-cyan-600 font-bold text-2xl">
-                            Aspramed
-                        </h3>
+                        {/* <h3 className="text-cyan-600 font-bold text-2xl">
+                            Lakmed
+                        </h3> */}
                     </Link>
 
                     <nav className="hidden md:flex items-center space-x-8">

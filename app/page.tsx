@@ -20,37 +20,44 @@ import Link from "next/link";
 export default function HomePage() {
     return (
         <div className="min-h-screen bg-white">
-            {/* Hero Section */}
-            <section className="relative py-24 lg:py-32 bg-gradient-to-br from-blue-50 to-green-50">
-                <div className="absolute inset-0 bg-black/10"></div>
-                <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 text-balance">
+            {/* Hero Section with Background Image */}
+            <section className="relative py-24 lg:py-32">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/waiting_Area.png"  // Place your image in /public folder
+                        alt="Healthcare background"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                    {/* Dark overlay for text readability */}
+                    <div className="absolute inset-0 bg-black/50"></div>
+                </div>
+
+                {/* Content - add relative and z-index */}
+                <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance">
                         Simple, Secure Telehealth for Patients and Providers
                     </h1>
-                    <p className="text-xl md:text-2xl text-slate-700 max-w-4xl mx-auto text-balance">
+                    <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto text-balance">
                         Consult doctors online, manage your health records, and
                         power your clinic operations—on one trusted platform.
                     </p>
                     <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Link href="/patients">
-                            <Button
-                                size="lg"
-                                className="bg-blue-600 hover:bg-blue-700 text-white">
+                            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
                                 I’m a Patient
                             </Button>
                         </Link>
                         <Link href="/businesses">
-                            <Button
-                                size="lg"
-                                variant="outline"
-                                className="border-primary text-primary bg-transparent">
+                            <Button size="lg" variant="outline" className="border-white text-white bg-transparent hover:bg-white/10">
                                 I’m a Business
                             </Button>
                         </Link>
                     </div>
                 </div>
             </section>
-
             {/* Trust Bar */}
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -209,38 +216,36 @@ export default function HomePage() {
                             Global Standards, Local Care
                         </h2>
                         <p className="text-lg text-slate-700 mb-12">
-                            Registered in Australia with operations in Zambia
-                            and Nigeria—bringing world‑class security and
-                            localized support.
+                            Australian-registered with active operations in Nigeria,
+                            combining global security standards with localized expertise and support.
                         </p>
-                        <div className="mx-auto max-w-2xl">
-                            <div className="relative w-full h-64 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center">
+                        <div className="mx-auto max-w-4xl">
+                            <div className="relative w-full h-80 rounded-2xl bg-white shadow-lg border border-slate-200 flex items-center justify-center">
                                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-50 to-green-50"></div>
-                                <div className="relative z-10 grid grid-cols-3 gap-16 px-4">
-                                    <div className="text-center">
-                                        <Heart className="h-10 w-10 text-green-600 mx-auto mb-3" />
-                                        <div className="font-semibold text-slate-900">
-                                            Zambia
+                                <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-20 md:gap-32 px-8">
+
+                                    {/* Australia */}
+                                    <div className="text-center flex flex-col items-center">
+                                        <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                                            <Globe className="h-8 w-8 text-blue-600" />
                                         </div>
-                                        <div className="text-sm text-slate-600">
-                                            Service Markets
-                                        </div>
-                                    </div>
-                                    <div className="text-center">
-                                        <Globe className="h-10 w-10 text-blue-600 mx-auto mb-3" />
-                                        <div className="font-semibold text-slate-900">
+                                        <div className="font-bold text-xl text-slate-900">
                                             Australia
                                         </div>
-                                        <div className="text-sm text-slate-600">
+                                        <div className="text-base text-slate-600 mt-1">
                                             Headquarters
                                         </div>
                                     </div>
-                                    <div className="text-center">
-                                        <Heart className="h-10 w-10 text-green-600 mx-auto mb-3" />
-                                        <div className="font-semibold text-slate-900">
+
+                                    {/* Nigeria */}
+                                    <div className="text-center flex flex-col items-center">
+                                        <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                                            <Heart className="h-8 w-8 text-green-600" />
+                                        </div>
+                                        <div className="font-bold text-xl text-slate-900">
                                             Nigeria
                                         </div>
-                                        <div className="text-sm text-slate-600">
+                                        <div className="text-base text-slate-600 mt-1">
                                             Service Markets
                                         </div>
                                     </div>
