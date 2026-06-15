@@ -140,7 +140,7 @@ export default function HomePage() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                            What You Can Do with Aspramed
+                            What You Can Do with Lakmed 
                         </h2>
                         <p className="text-lg text-slate-700 max-w-3xl mx-auto">
                             Powerful, easy-to-use tools for individuals and
@@ -216,37 +216,25 @@ export default function HomePage() {
                             Global Standards, Local Care
                         </h2>
                         <p className="text-lg text-slate-700 mb-12">
-                            Australian-registered with active operations in Nigeria,
-                            combining global security standards with localized expertise and support.
+                            Built for Nigeria and Africa, delivering world-class services tailored to the unique needs of local communities and organizations.
+
                         </p>
                         <div className="mx-auto max-w-4xl">
                             <div className="relative w-full h-80 rounded-2xl bg-white shadow-lg border border-slate-200 flex items-center justify-center">
                                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-50 to-green-50"></div>
                                 <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-20 md:gap-32 px-8">
 
-                                    {/* Australia */}
-                                    <div className="text-center flex flex-col items-center">
-                                        <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-4">
-                                            <Globe className="h-8 w-8 text-blue-600" />
-                                        </div>
-                                        <div className="font-bold text-xl text-slate-900">
-                                            Australia
-                                        </div>
-                                        <div className="text-base text-slate-600 mt-1">
-                                            Headquarters
-                                        </div>
-                                    </div>
-
+                                    
                                     {/* Nigeria */}
                                     <div className="text-center flex flex-col items-center">
                                         <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                                            <Heart className="h-8 w-8 text-green-600" />
+                                            <Globe className="h-8 w-8 text-green-600" />
                                         </div>
                                         <div className="font-bold text-xl text-slate-900">
                                             Nigeria
                                         </div>
                                         <div className="text-base text-slate-600 mt-1">
-                                            Service Markets
+                                            Headquarters
                                         </div>
                                     </div>
                                 </div>
@@ -257,7 +245,7 @@ export default function HomePage() {
             </section>
 
             {/* Partners Strip */}
-            <section className="py-24 bg-slate-50">
+            {/* <section className="py-24 bg-slate-50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-12">
                         Trusted by Healthcare Leaders
@@ -304,7 +292,7 @@ export default function HomePage() {
                         </Link>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Final CTA */}
             <section className="py-24 bg-gradient-to-r from-blue-600 to-green-600 text-white">

@@ -38,20 +38,16 @@ export default function Header() {
                                 title: "For Businesses",
                                 link: "/for-businesses",
                             },
-                            // {
-                            //     title: "For Professionals",
-                            //     link: "/for-professionals",
-                            // },
                             { title: "Contact", link: "/contact" },
                         ].map(item => {
                             return (
                                 <Link
                                     key={item.link}
                                     href={`${item.link}`}
-                                    className={`hover:text-primary transition-colors duration-300 font-[500] text-sm ${
+                                    className={`transition-colors duration-300 font-[500] text-sm ${
                                         pathname == item.link
-                                            ? "underline underline-offset-8 text-primary"
-                                            : "text-slate-600"
+                                            ? "underline underline-offset-8 text-[#43D6D6]"
+                                            : "text-slate-600 hover:text-[#43D6D6]"
                                     }`}>
                                     {item.title}
                                 </Link>
@@ -62,7 +58,7 @@ export default function Header() {
                     <div className="flex items-center space-x-4">
                         <Button
                             asChild
-                            className="font-semibold px-6 transition-transform hover:scale-105 hidden md:inline-flex">
+                            className="font-semibold px-6 transition-transform hover:scale-105 hidden md:inline-flex bg-[#43D6D6] hover:bg-[#3bc0c0] text-white">
                             <Link href="/donate">Download</Link>
                         </Button>
                         <SheetDemo />

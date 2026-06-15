@@ -17,9 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Aspramed - Accessible Healthcare Anywhere, Anytime",
-    description:
-        "Virtual consultations for patients and complete digital platform for healthcare providers in Zambia and Nigeria.",
+    title: "Lakmed - Secure Telehealth for Africa",
+    description: "Virtual healthcare consultations for patients and an integrated digital platform for healthcare providers across Nigeria and Africa.",
 };
 
 export default function RootLayout({
