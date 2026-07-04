@@ -11,7 +11,7 @@ export default function AboutPage() {
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/waiting_Area.png"
+                        src="/about2.png"
                         alt="Healthcare accessibility background"
                         fill
                         className="object-cover"
@@ -65,7 +65,7 @@ export default function AboutPage() {
                         </div>
                         <div className="relative">
                             <Image
-                                src="/lakmed.png"
+                                src="/lakmed_4.png"
                                 alt="Healthcare team collaboration representing Aspramed's founding vision"
                                 width={600}
                                 height={400}
@@ -77,39 +77,63 @@ export default function AboutPage() {
             </section>
 
             {/* Mission & Vision Section */}
-            <section className="py-24 bg-slate-50">
+            <section className="py-24 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid md:grid-cols-2 gap-12">
-                        <Card className="p-12 bg-white shadow-lg border-0">
-                            <CardContent className="p-0">
-                                <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                    <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+                        {/* Mission Card - Navy */}
+                        <Card className="relative p-10 bg-[#181F59] border-0 rounded-2xl overflow-hidden">
+                            {/* Brand Aesthetic Image - subtle background decoration */}
+                            <div className="absolute bottom-4 right-4 w-32 h-32 opacity-10 pointer-events-none">
+                                <Image
+                                    src="/logo2.png"
+                                    alt=""
+                                    fill
+                                    sizes="128px"
+                                    className="object-contain"
+                                />
+                            </div>
+
+                            <CardContent className="p-0 relative z-10">
+                                <h2 className="text-3xl font-bold text-white mb-6">
                                     Our Mission
                                 </h2>
-                                <p className="text-lg text-slate-700 leading-relaxed">
+                                <p className="text-base text-white/80 leading-relaxed">
                                     To transform healthcare access across Nigeria and Sub-Saharan Africa by providing seamless,
                                     secure, and patient-centered telehealth solutions. Our mission is to connect individuals and
                                     communities with quality healthcare services regardless of their location or circumstances,
                                     fostering healthier populations through innovation, accessibility, and continuous care.
-
                                 </p>
                             </CardContent>
                         </Card>
-                        <Card className="p-12 bg-white shadow-lg border-0">
-                            <CardContent className="p-0">
-                                <h2 className="text-3xl font-bold text-slate-900 mb-6">
+
+                        {/* Vision Card - Cyan */}
+                        <Card className="relative p-10 bg-[#43D6D6] border-0 rounded-2xl overflow-hidden">
+                            {/* Brand Aesthetic Image - subtle background decoration */}
+                            <div className="absolute bottom-4 right-4 w-32 h-32 opacity-15 pointer-events-none">
+                                <Image
+                                    src="/logo.png"
+                                    alt=""
+                                    fill
+                                    sizes="128px"
+                                    className="object-contain"
+                                />
+                            </div>
+
+                            <CardContent className="p-0 relative z-10">
+                                <h2 className="text-3xl font-bold text-[#181F59] mb-6">
                                     Our Vision
                                 </h2>
-                                <p className="text-lg text-slate-700 leading-relaxed">
+                                <p className="text-base text-[#181F59]/80 leading-relaxed">
                                     To create a future where quality healthcare is accessible to everyone, empowering individuals
                                     and communities through innovative, patient-centered digital health solutions.
-
                                 </p>
                             </CardContent>
                         </Card>
+
                     </div>
                 </div>
             </section>
-
             {/* Core Values Section */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -193,8 +217,8 @@ export default function AboutPage() {
                         <h2 className="text-3xl md:text-4xl font-bold text-[#181F59] mb-4">
                             The Visionary Behind Lakmed
                         </h2>
-                        <div className="max-w-3xl mx-auto">
-                            <p className="text-xl md:text-2xl text-[#43D6D6] font-medium italic leading-relaxed">
+                        <div className="max-w-3xl mx-auto py-4">
+                            <p className="text-xl md:text-2xl text-[#43D6D6] font-medium italic leading-snug">
                                 "Getting transportation and food delivery by phone is easy. So why are patients still packed into waiting rooms to see their doctor?"
                             </p>
                         </div>
@@ -243,19 +267,19 @@ export default function AboutPage() {
             </section>
 
             {/* Join Our Mission Section */}
-            <section className="py-24 bg-gradient-to-r from-blue-600 to-green-600 text-white">
+            <section className="py-24 bg-gradient-to-r from-[#181F59] to-[#43D6D6] text-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">
                         Want to Help Us Reshape Healthcare?
                     </h2>
-                    <p className="text-xl mb-8 max-w-3xl mx-auto text-balance">
+                    <p className="text-xl mb-8 max-w-3xl mx-auto text-balance text-white/90">
                         We are always looking for passionate, talented
                         individuals to join our team. If you believe in our
                         mission, we&apos;d love to hear from you.
                     </p>
                     <Button
                         size="lg"
-                        className="bg-white text-blue-600 hover:bg-slate-100 font-semibold px-8 py-4">
+                        className="bg-white text-[#181F59] hover:bg-white/90 font-semibold px-8 py-4 rounded-lg">
                         View Open Positions
                     </Button>
                 </div>

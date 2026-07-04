@@ -21,12 +21,12 @@ import Link from "next/link";
 export default function PatientsPage() {
     return (
         <>
-            <section className="relative py-24 px-6 bg-gradient-to-br from-blue-50 to-green-50">
+            <section className="relative py-24 px-6 bg-gradient-to-br from-[#181F59]/5 to-[#43D6D6]/10">
                 <div className="container mx-auto max-w-6xl">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-8">
                             <div className="space-y-6">
-                                <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 leading-tight text-balance">
+                                <h1 className="text-5xl lg:text-6xl font-bold text-[#181F59] leading-tight text-balance">
                                     Feeling Unwell? See a Licensed Doctor in
                                     Minutes.
                                 </h1>
@@ -37,34 +37,47 @@ export default function PatientsPage() {
                                 </p>
                             </div>
 
-                            <div className="flex flex-row space-x-6">
+                            {/* App Store Buttons */}
+                            <div className="flex flex-col sm:flex-row gap-4 items-start">
+                                {/* App Store Button */}
                                 <Link
                                     href="https://apps.apple.com/us/app/aspramed/id1603689060"
                                     target="_blank"
-                                    className="bg-primary flex flex-row text-white  items-center cursor-pointer rounded-md px-4 py-2 space-x-2">
-                                    <Apple className="w-4 h-4" />
-                                    <div className="flex flex-col items-start">
-                                        <span className="text-xs">
-                                            {" "}
-                                            Download on the{" "}
+                                    className="bg-black hover:bg-black/80 text-white flex items-center gap-3 rounded-xl px-5 py-3 transition-colors">
+                                    <Image
+                                        src="/applei.png"
+                                        alt="App Store"
+                                        width={32}
+                                        height={32}
+                                        className="w-8 h-8 object-contain"
+                                    />
+                                    <div className="flex flex-col items-start leading-none">
+                                        <span className="text-xs text-white/80">
+                                            Download on the
                                         </span>
-                                        <span className="text-sm font-semibold">
+                                        <span className="text-lg font-semibold">
                                             App Store
                                         </span>
                                     </div>
                                 </Link>
 
+                                {/* Google Play Button */}
                                 <Link
                                     href="https://play.google.com/store/apps/details?id=com.aspramed.userapp"
                                     target="_blank"
-                                    className="bg-secondary flex flex-row text-white  items-center cursor-pointer rounded-md px-4 py-2 space-x-2">
-                                    <Play className="w-4 h-4" />
-                                    <div className="flex flex-col items-start">
-                                        <span className="text-xs">
-                                            {" "}
-                                            Download on the{" "}
+                                    className="bg-black hover:bg-black/80 text-white flex items-center gap-3 rounded-xl px-5 py-3 transition-colors">
+                                    <Image
+                                        src="/andriod.png"
+                                        alt="Google Play"
+                                        width={32}
+                                        height={32}
+                                        className="w-8 h-8 object-contain"
+                                    />
+                                    <div className="flex flex-col items-start leading-none">
+                                        <span className="text-xs text-white/80">
+                                            GET IT ON
                                         </span>
-                                        <span className="text-sm font-semibold">
+                                        <span className="text-lg font-semibold">
                                             Google Play
                                         </span>
                                     </div>
@@ -77,8 +90,9 @@ export default function PatientsPage() {
                                 className="w-full rounded-2xl shadow-2xl"
                                 src="/lakmed1.png"
                                 alt="Mother and child using telehealth app"
-                                width={200}
-                                height={200}
+                                width={600}
+                                height={500}
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                         </div>
                     </div>
@@ -89,58 +103,96 @@ export default function PatientsPage() {
             <section className="py-24 px-6 bg-white">
                 <div className="container mx-auto max-w-6xl">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-slate-900 mb-6 text-balance">
+                        <h2 className="text-4xl font-bold text-[#181F59] mb-6 text-balance">
                             Your Consultation is Just 3 Steps Away
                         </h2>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-12">
-                        <div className="text-center space-y-6">
-                            <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
-                                <Stethoscope className="w-10 h-10 text-blue-600" />
+                    <div className="grid md:grid-cols-3 gap-8">
+
+                        {/* Card 1 - Find Your Doctor */}
+                        <Card className="bg-white border border-slate-100 shadow-sm hover:shadow-lg transition-shadow overflow-hidden rounded-2xl p-0">
+                            {/* Image Area - fills top, touches border */}
+                            <div className="relative w-full h-48">
+                                <Image
+                                    src="/patient1.jpg"
+                                    alt="Team of doctors"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    className="object-cover"
+                                />
                             </div>
-                            <div className="space-y-3">
-                                <h3 className="text-2xl font-semibold text-slate-900">
+                            <div className="p-8 text-center">
+                                {/* Icon */}
+                                <div className="w-16 h-16 rounded-full bg-[#181F59] flex items-center justify-center mx-auto mb-4">
+                                    <Stethoscope className="w-8 h-8 text-[#43D6D6]" />
+                                </div>
+                                <h3 className="text-xl font-bold text-[#181F59] mb-3">
                                     Find Your Doctor
                                 </h3>
-                                <p className="text-slate-600 leading-relaxed">
+                                <p className="text-slate-600 leading-relaxed text-sm">
                                     Browse our network of licensed doctors and
                                     specialists. Filter by specialty and see
                                     their profiles and availability.
                                 </p>
                             </div>
-                        </div>
+                        </Card>
 
-                        <div className="text-center space-y-6">
-                            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-                                <Calendar className="w-10 h-10 text-green-600" />
+                        {/* Card 2 - Confirm Appointment */}
+                        <Card className="bg-white border border-slate-100 shadow-sm hover:shadow-lg transition-shadow overflow-hidden rounded-2xl p-0">
+                            {/* Image Area - fills top, touches border */}
+                            <div className="relative w-full h-48">
+                                <Image
+                                    src="/patient2.jpg"
+                                    alt="Nurse booking appointment"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    className="object-cover"
+                                />
                             </div>
-                            <div className="space-y-3">
-                                <h3 className="text-2xl font-semibold text-slate-900">
-                                    Book Your Time
+                            <div className="p-8 text-center">
+                                {/* Icon */}
+                                <div className="w-16 h-16 rounded-full bg-[#43D6D6] flex items-center justify-center mx-auto mb-4">
+                                    <Calendar className="w-8 h-8 text-[#181F59]" />
+                                </div>
+                                <h3 className="text-xl font-bold text-[#181F59] mb-3">
+                                    Confirm Appointment
                                 </h3>
-                                <p className="text-slate-600 leading-relaxed">
+                                <p className="text-slate-600 leading-relaxed text-sm">
                                     Choose a time that works for you and book
                                     your appointment instantly through the app.
                                 </p>
                             </div>
-                        </div>
+                        </Card>
 
-                        <div className="text-center space-y-6">
-                            <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
-                                <Video className="w-10 h-10 text-purple-600" />
+                        {/* Card 3 - Start Your Consultation */}
+                        <Card className="bg-white border border-slate-100 shadow-sm hover:shadow-lg transition-shadow overflow-hidden rounded-2xl p-0">
+                            {/* Image Area - fills top, touches border */}
+                            <div className="relative w-full h-48">
+                                <Image
+                                    src="/patient3.png"
+                                    alt="Doctor waving on video call"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    className="object-cover"
+                                />
                             </div>
-                            <div className="space-y-3">
-                                <h3 className="text-2xl font-semibold text-slate-900">
+                            <div className="p-8 text-center">
+                                {/* Icon */}
+                                <div className="w-16 h-16 rounded-full bg-[#181F59] flex items-center justify-center mx-auto mb-4">
+                                    <Video className="w-8 h-8 text-[#43D6D6]" />
+                                </div>
+                                <h3 className="text-xl font-bold text-[#181F59] mb-3">
                                     Start Your Consultation
                                 </h3>
-                                <p className="text-slate-600 leading-relaxed">
+                                <p className="text-slate-600 leading-relaxed text-sm">
                                     Connect with your doctor via a secure video
                                     or audio call. Get medical advice,
                                     prescriptions, and more.
                                 </p>
                             </div>
-                        </div>
+                        </Card>
+
                     </div>
                 </div>
             </section>
@@ -214,7 +266,7 @@ export default function PatientsPage() {
                         <div className="relative">
                             <Image
                                 className="h-[500px] w-[311px] rounded-2xl shadow-2xl"
-                                src="/p2.png"
+                                src="/LAKMED 2.png"
                                 alt="Screenshot from app"
                                 width={500}
                                 height={500}
@@ -406,49 +458,63 @@ export default function PatientsPage() {
             </section>
 
             {/* Final CTA */}
-            <section className="py-24 px-6 bg-blue-600 relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-green-600"></div>
+            <section className="py-24 px-6 bg-gradient-to-r from-[#181F59] to-[#43D6D6] relative">
                 <div className="relative container mx-auto max-w-4xl text-center">
                     <div className="space-y-8">
                         <h2 className="text-4xl lg:text-5xl font-bold text-white text-balance">
                             Take Control of Your Health Today.
                         </h2>
                         <p className="text-xl text-white/90 text-pretty">
-                            Download the free Aspramed app to get started.
+                            Download the free Lakmed app to get started.
                         </p>
 
-                        <div className="flex flex-row gap-6 justify-center">
+                        {/* App Store Buttons */}
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+
+                            {/* App Store Button */}
                             <Link
                                 href="https://apps.apple.com/us/app/aspramed/id1603689060"
                                 target="_blank"
-                                className="bg-background text-primary border-primary border-1 flex flex-row   items-center cursor-pointer rounded-md px-4 py-2 space-x-2">
-                                <Apple className="w-4 h-4" />
-                                <div className="flex flex-col items-start">
-                                    <span className="text-xs">
-                                        {" "}
-                                        Download on the{" "}
+                                className="bg-black hover:bg-black/80 text-white flex items-center gap-3 rounded-xl px-5 py-3 transition-colors">
+                                <Image
+                                    src="/applei.png"
+                                    alt="App Store"
+                                    width={32}
+                                    height={32}
+                                    className="w-8 h-8 object-contain"
+                                />
+                                <div className="flex flex-col items-start leading-none">
+                                    <span className="text-xs text-white/80">
+                                        Download on the
                                     </span>
-                                    <span className="text-sm font-semibold">
+                                    <span className="text-lg font-semibold">
                                         App Store
                                     </span>
                                 </div>
                             </Link>
 
+                            {/* Google Play Button */}
                             <Link
                                 href="https://play.google.com/store/apps/details?id=com.aspramed.userapp"
                                 target="_blank"
-                                className="bg-background text-secondary flex flex-row border-secondary  border-1 items-center cursor-pointer rounded-md px-4 py-2 space-x-2">
-                                <Play className="w-4 h-4" />
-                                <div className="flex flex-col items-start">
-                                    <span className="text-xs">
-                                        {" "}
-                                        Download on the{" "}
+                                className="bg-black hover:bg-black/80 text-white flex items-center gap-3 rounded-xl px-5 py-3 transition-colors">
+                                <Image
+                                    src="/andriod.png"
+                                    alt="Google Play"
+                                    width={32}
+                                    height={32}
+                                    className="w-8 h-8 object-contain"
+                                />
+                                <div className="flex flex-col items-start leading-none">
+                                    <span className="text-xs text-white/80">
+                                        GET IT ON
                                     </span>
-                                    <span className="text-sm font-semibold">
+                                    <span className="text-lg font-semibold">
                                         Google Play
                                     </span>
                                 </div>
                             </Link>
+
                         </div>
                     </div>
                 </div>
