@@ -28,7 +28,7 @@ export function SheetDemo() {
                     <div className="flex items-center space-x-3 mt-4">
                         <Link href="/" className="flex items-center space-x-3">
                             <h3 className="text-cyan-600 font-bold text-5xl">
-                                Aspramed
+                                Lakmed
                             </h3>
                         </Link>
                     </div>

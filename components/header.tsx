@@ -19,7 +19,7 @@ export default function Header() {
                     <Link href="/" className="flex items-center space-x-3">
                         <Image
                             src={image1}
-                            alt="Aspramed Logo"
+                            alt="Lakmed Logo"
                             width={600}
                             height={600}
                             className="h-12 w-auto"
