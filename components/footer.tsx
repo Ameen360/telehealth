@@ -104,7 +104,7 @@ export default function Footer() {
                                 <a
                                     href="mailto:support@Lakmed.com"
                                     className="hover:text-[#43D6D6] transition-colors">
-                                    support@Lakmed.com
+                                    info@lakmed.com.ng
                                 </a>
                             </div>
                             <div className="flex items-start gap-3">
@@ -150,12 +150,9 @@ export default function Footer() {
 
                 {/* Bottom Bar - Reduced height */}
                 <div className="border-t border-white/20 pt-4 pb-0">
-                    <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/60 gap-2">
+                    <div className="flex flex-col md:flex-row justify-center items-center text-sm text-white/60 gap-2">
                         <p>
                             © {new Date().getFullYear()} Lakmed. All rights reserved.
-                        </p>
-                        <p>
-                            © {new Date().getFullYear()} Lakmed Operations Private Limited
                         </p>
                     </div>
                 </div>

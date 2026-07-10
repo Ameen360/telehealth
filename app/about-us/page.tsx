@@ -99,10 +99,11 @@ export default function AboutPage() {
                                     Our Mission
                                 </h2>
                                 <p className="text-base text-white/80 leading-relaxed">
-                                    To transform healthcare access across Nigeria and Sub-Saharan Africa by providing seamless,
-                                    secure, and patient-centered telehealth solutions. Our mission is to connect individuals and
-                                    communities with quality healthcare services regardless of their location or circumstances,
-                                    fostering healthier populations through innovation, accessibility, and continuous care.
+                                    To transform healthcare access across Nigeria and Sub-Saharan Africa by providing 
+                                    seamless, secure, and patient-centered telehealth solutions. Our mission is to connect
+                                    individuals and communities with quality healthcare services regardless of their location 
+                                    or circumstances, fostering healthier populations through innovation, accessibility, 
+                                    and continuous care.
                                 </p>
                             </CardContent>
                         </Card>
