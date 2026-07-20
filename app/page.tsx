@@ -103,15 +103,15 @@ export default function HomePage() {
                     <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
 
                         {/* For Patients Card */}
-                        <Card className="text-left bg-white border border-slate-200 hover:shadow-xl transition-all duration-300 overflow-hidden rounded-xl">
-                            {/* Image Area - No padding, image touches top border */}
+                        <Card className="text-left bg-white border border-slate-200 hover:shadow-xl transition-all duration-300 overflow-hidden rounded-xl p-0">
+                            {/* Image Area - touches top border */}
                             <div className="relative w-full h-64">
                                 <Image
                                     src="/rectangle 12.png"
                                     alt="Patient using telehealth"
                                     fill
                                     sizes="(max-width: 768px) 100vw, 50vw"
-                                    className="object-cover rounded-xl"
+                                    className="object-cover"
                                 />
                                 {/* Gradient overlay at bottom of image for smooth transition */}
                                 <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
@@ -138,15 +138,15 @@ export default function HomePage() {
                         </Card>
 
                         {/* For Businesses Card */}
-                        <Card className="text-left bg-white border border-slate-200 hover:shadow-xl transition-all duration-300 overflow-hidden rounded-xl">
-                            {/* Image Area - No padding, image touches top border */}
+                        <Card className="text-left bg-white border border-slate-200 hover:shadow-xl transition-all duration-300 overflow-hidden rounded-xl p-0">
+                            {/* Image Area - touches top border */}
                             <div className="relative w-full h-64">
                                 <Image
-                                    src="/rectangle 13.png"
+                                    src="/patient3.png"
                                     alt="Patient using telehealth"
                                     fill
                                     sizes="(max-width: 768px) 100vw, 50vw"
-                                    className="object-cover rounded-xl"
+                                    className="object-cover"
                                 />
                                 {/* Gradient overlay at bottom of image for smooth transition */}
                                 <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
@@ -173,7 +173,6 @@ export default function HomePage() {
                                 </Link>
                             </CardContent>
                         </Card>
-
                     </div>
                 </div>
             </section>
