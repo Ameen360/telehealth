@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Lakmed",
+    "slug": "lakmed-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/brand/icon-mark.png",
+    "scheme": "lakmedmobile",
+    "userInterfaceStyle": "automatic",
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6FBFB",
+        "foregroundImage": "./assets/images/brand/icon-mark.png",
+        "monochromeImage": "./assets/images/brand/icon-mark-mono.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/brand/icon-mark.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FFFFFF",
+          "image": "./assets/images/brand/icon-mark.png",
+          "imageWidth": 120
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
